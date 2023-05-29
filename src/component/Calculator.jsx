@@ -24,7 +24,7 @@ const Calculator = () => {
   const clearInput = () => {
     setInput("");
     setResult("");
-    setHistory("")
+    setHistory("");
   };
 
   const showHistory = () => {
@@ -53,15 +53,29 @@ const Calculator = () => {
       style={{ height: "100vh" }}
     >
       <Grid item xs={12} md={4} lg={4} p={1}>
+        <Typography variant="h3" mb={3}>
+          Calculator
+        </Typography>
+
         <Paper style={{ padding: "1rem" }}>
-          <InputField input={input} />
-          <Grid>
-            <Typography variant="h5" textAlign='left'>{result}</Typography>
+          <Grid border="2px solid gray" borderRadius="4px" p={2}>
+            <InputField input={input} />
+            <Grid>
+              <Typography variant="h5" textAlign="left">
+                {result}
+              </Typography>
+            </Grid>
           </Grid>
           <Grid container spacing={1} style={{ marginTop: "1rem" }}>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 fullWidth
                 onClick={() => handleInput("1")}
               >
@@ -70,8 +84,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("2")}
               >
                 2
@@ -79,8 +99,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("3")}
               >
                 3
@@ -88,8 +114,9 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{ background: "#59515e" }}
                 onClick={() => handleInput("+")}
               >
                 +
@@ -97,7 +124,13 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 fullWidth
                 onClick={() => handleInput("4")}
               >
@@ -106,8 +139,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("5")}
               >
                 5
@@ -115,8 +154,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("6")}
               >
                 6
@@ -124,8 +169,9 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{ background: "#59515e" }}
                 onClick={() => handleInput("-")}
               >
                 -
@@ -133,8 +179,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("7")}
               >
                 7
@@ -142,8 +194,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("8")}
               >
                 8
@@ -151,8 +209,14 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#8741b5",
+                  "&:hover": {
+                    backgroundColor: "#8741b5",
+                  },
+                }}
                 onClick={() => handleInput("9")}
               >
                 9
@@ -160,16 +224,44 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
+                sx={{
+                  background: "#59515e",
+                  "&:hover": {
+                    backgroundColor: "#59515e",
+                  },
+                }}
                 onClick={() => handleInput("*")}
               >
                 *
               </Button>
             </Grid>
+
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
+                fullWidth
+                sx={{
+                  background: "#59515e",
+                  "&:hover": {
+                    backgroundColor: "#59515e",
+                  },
+                }}
+                onClick={() => handleInput(".")}
+              >
+                .
+              </Button>
+            </Grid>
+            <Grid item xs={3}>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "#59515e",
+                  "&:hover": {
+                    backgroundColor: "#59515e",
+                  },
+                }}
                 fullWidth
                 onClick={() => handleInput("0")}
               >
@@ -178,34 +270,61 @@ const Calculator = () => {
             </Grid>
             <Grid item xs={3}>
               <Button
-                variant="outlined"
+                variant="contained"
                 fullWidth
-                onClick={() => handleInput(".")}
-              >
-                .
-              </Button>
-            </Grid>
-            <Grid item xs={3}>
-              <Button
-                variant="outlined"
-                fullWidth
+                sx={{
+                  background: "#59515e",
+                  "&:hover": {
+                    backgroundColor: "#59515e",
+                  },
+                }}
                 onClick={() => handleInput("/")}
               >
                 /
               </Button>
             </Grid>
             <Grid item xs={3}>
-              <Button variant="outlined" fullWidth onClick={calculateResult}>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "#59515e",
+                  "&:hover": {
+                    backgroundColor: "#59515e",
+                  },
+                }}
+                fullWidth
+                onClick={calculateResult}
+              >
                 =
               </Button>
             </Grid>
             <Grid item xs={6}>
-              <Button variant="outlined" fullWidth onClick={showHistory}>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "#c23e23",
+                  "&:hover": {
+                    backgroundColor: "#c23e23",
+                  },
+                }}
+                fullWidth
+                onClick={showHistory}
+              >
                 History
               </Button>
             </Grid>
             <Grid item xs={6}>
-              <Button variant="outlined" fullWidth onClick={() => clearInput()}>
+              <Button
+                variant="contianed"
+                sx={{
+                  background: "#c27223",
+                  "&:hover": {
+                    backgroundColor: "#c27223",
+                  },
+                }}
+                fullWidth
+                onClick={() => clearInput()}
+              >
                 Clear
               </Button>
             </Grid>

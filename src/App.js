@@ -1,6 +1,6 @@
 import './App.css';
 import Calculator from './component/Calculator';
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 
 function App() {
   return (
