@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper, TextField, Button, Typography } from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 
 export default function InputField({ input }) {
   return (
